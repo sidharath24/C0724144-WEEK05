@@ -33,12 +33,23 @@ namespace C0724144_Week05
         public void run()
         {
             FirstFloor = new Node();
+            SecondFloor = new Node();
+            ThirdFloor = new Node();
+            FourthFloor = new Node();
             FirstFloor.FloorNumber = "First Floor";
-            Console.WriteLine("floor number is {0} ", FirstFloor.FloorNumber);
             FirstFloor.elevatorUp = SecondFloor;
+            Console.WriteLine("Your current floor is {0}",FirstFloor.FloorNumber);
             SecondFloor.FloorNumber = "Second Floor";
+            SecondFloor.elevatorUp = ThirdFloor;
+            Console.WriteLine("Your current floor is {0}", SecondFloor.FloorNumber);
+            ThirdFloor.FloorNumber = "Third Floor";
+            ThirdFloor.elevatorUp = ThirdFloor;
+            Console.WriteLine("Your current floor is {0}", ThirdFloor.FloorNumber);
+            FourthFloor.FloorNumber = "Fourth Floor";
+            FourthFloor.elevatorUp = null;
+            Console.WriteLine("Your current floor is {0}", FourthFloor.FloorNumber);
 
-            Console.WriteLine("floor number is {0} ", SecondFloor.FloorNumber);
+
         }
     }
 }
